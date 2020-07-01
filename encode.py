@@ -12,7 +12,6 @@ tf.compat.v1.flags.DEFINE_integer(name= 'iters', default= 10, help= 'number of i
 tf.compat.v1.flags.DEFINE_string(name= 'output', default= 'compressed', help= 'output path')
 tf.compat.v1.flags.DEFINE_string(name= 'model', default= 'save/model', help= 'saved model')
 
-FLAGS = tf.compat.v1.flags.FLAGS
 
 try:
     image = imread(tf.compat.v1.flags.FLAGS.input).astype(tf.float32)
