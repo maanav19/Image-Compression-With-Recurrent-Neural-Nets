@@ -18,6 +18,7 @@ try:
 
 except:
     print('please check the image path')
+    exit()
 
 height, width, channel = image.shape
 new_height = height + 16 - height % 16

@@ -25,7 +25,8 @@ def rnn_conv(name, inputs, hiddens, filters, kernel_size, strides):
                                                  kernel_size = kernel_size, padding = 'same', strides = strides)
 
     #Defining the different gate units in an LSTM cell
-    in_gate, out_gate, cell_gate, forget_gate = tf.split(conv_inputs + conv_hidden, 4, axis = -1)
+    summation = conv_inputs + conv_hidden
+    in_gate, out_gate, cell_gate, forget_gate = tf.split(summation, 4, axis = -1)
     in_gate = tf.nn.sigmoid(in_gate)
     out_gate = tf.nn.sigmoid(out_gate)
     forget_gate = tf.nn.sigmoid(forget_gate)
