@@ -1,7 +1,7 @@
 from __future__ import print_function
 import io
 import numpy as np
-from scipy.misc import imread, imsave
+from imageio import imread, imsave
 import tensorflow as tf
 from model import encoder, decoder
 
